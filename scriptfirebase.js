@@ -64,6 +64,9 @@ document.getElementById("login").addEventListener("click", function () {
             const user = userCredential.user;
             console.log(user);
             alert(user.email + " Login successfully!!!");
+            document.getElementById('container').style.display='none';
+            document.getElementById('test').style.display='block';
+            
             document.getElementById('logout').style.display = 'block';
         })
         .catch((error) => {
@@ -80,6 +83,8 @@ document.getElementById("logout").addEventListener("click", function () {
         console.log('Sign-out successful.');
         alert('Sign-out successful.');
         document.getElementById('logout').style.display = 'none';
+        document.getElementById('test').style.display='none';
+        document.getElementById('container').style.display='block';
     }).catch((error) => {
         // An error happened.
         console.log('An error happened.');
